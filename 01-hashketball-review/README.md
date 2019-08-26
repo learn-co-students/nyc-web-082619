@@ -1,20 +1,20 @@
 # Hashketball Review
 
-## Objectives
+## SWBATs
 
-* Distinguish between data types in Ruby
-* Show how to look up documentation for data types in Ruby
-* Demonstrate the use of common Array methods
-  * `#each`
-  * `#map`
-  * `#select`
-  * `#find`
-* Differentiate array methods by their respective return values
-* Define the Single Responsibility Principle
-* Employ test-driven development best practices in their labs
-  * `rspec --fail-fast` handle one error at a time
-  * Red, Green, Refactor
-  * Make it work (shameless green), make it right, make it fast
+* [x] Distinguish between data types in Ruby
+* [ ] Show how to look up documentation for data types in Ruby
+* [x] Demonstrate the use of common Array methods
+  * [x] `#each`
+  * [x] `#map`
+  * [x] `#select`
+  * [x] `#find`
+* [x] Differentiate array methods by their respective return values
+* [x] Define the Single Responsibility Principle
+* [x] Employ test-driven development best practices in their labs
+  * [x] `rspec --fail-fast` handle one error at a time
+  * [x] Red, Green, Refactor
+  * [x] Make it work (shameless green), make it right, make it fast
 
 ---
 
