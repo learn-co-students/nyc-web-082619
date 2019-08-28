@@ -30,7 +30,7 @@ class Dog
     if self.breed.downcase == "great dane"
       puts "Hey dude. What's good? I'm #{self.name}. Be cool."
     else
-    puts "Bark bark #{self.name}"
+      puts "Bark bark #{self.name}"
     end
   end
 
@@ -54,9 +54,11 @@ class Dog
 
   def self.sing
     puts '🎶🎶🎶🎶🎶🎶🎶'
+    
     self.all.each do |dog|
       dog.speak
     end
+    
     puts '🎶🎶🎶🎶🎶🎶🎶'
   end
 
