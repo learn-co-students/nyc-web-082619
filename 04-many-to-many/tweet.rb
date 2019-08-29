@@ -19,13 +19,14 @@ class Tweet
   end
   
   def likers
-    likes = Like.all
-    liked_tweets = likes.select do |like|
+    all_likes = Like.all
+
+    my_likes = all_likes.select do |like|
       like.tweet == self
     end
 
-    liked_tweets.map do |liked_tweet|
-      liked_tweet.user
+    my_likes.map do |like|
+      like.user
     end
   end
   
