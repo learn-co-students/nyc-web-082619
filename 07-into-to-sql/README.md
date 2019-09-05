@@ -31,7 +31,7 @@ __Update__
 __Destroy__
 - delete - get rid of it
 
-- CRUD applications
+### CRUD applications
 
 #### Instagram
 
