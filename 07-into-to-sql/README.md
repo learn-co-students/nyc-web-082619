@@ -13,6 +13,62 @@
 ## What can I do with data?
 
 
+CRUD
+
+- Create
+- store
+
+
+- Read
+- look it up
+- compare it - differences in values, length of something
+- analyze - average, statistics, count, logistic regression
+
+
+- Update
+- update - change name, address - alter attributes of some data
+
+- Destroy
+- delete - get rid of it
+
+- CRUD applications
+
+Instagram
+
+Create
+- make post, story, uploading a photo
+- make a comment
+
+Read
+- scrollin' through your feedz
+
+Updating
+- edit the comment, changing your username, avatar
+
+Destroy
+- deleting a post
+- deleting your account
+
+Database
+- a place for storage
+- a big server
+- informatio on a computer
+- a bunch of tables
+
+- Relational Databases - MySQL, SQLite, Oracle, Postgres (different types of relational databases) - SQL-like (access them using SQLish queries, varies by platform)
+  - NoSQL - MongoDB
+  - Key value stores - Redis, caching
+  - graph databases - Neeo4j
+
+SQL
+- Structured Query Language
+  - a way of reading stuff from a database
+  - it's a language
+  - declarative
+
+What's the difference between SQL and SQLite3
+- SQL is the language
+- SQLite is a program  - specifically, it's a type of RDBMS - relational database management system
 
 ## Set Up 
 
@@ -25,15 +81,54 @@
 
 1. Write the SQL to return all of the rows in the artists table?
 
+```sql
+SELECT *
+FROM artists;
+```
+
 2. Write the SQL to select the artist with the name "Black Sabbath"
+
+```sql
+SELECT *
+FROM artists
+WHERE name = "Black Sabbath";
+```
+
+```sql
+SELECT *
+FROM artists
+WHERE name LIKE  "%black%";
+```
 
 3. Write the SQL to create a table named 'fans' with an autoincrementing ID that's a primary key and a name field of type text
 
-4. Write the SQL to alter the fans table to have a artist_id column type integer?
+```sql
+CREATE TABLE fans
+(
+  id INTEGER PRIMARY KEY,
+  name TEXT
+);
+```
+4. Write the SQL to alter the fans table to have an artist_id column type integer?
+
+```sql
+ALTER TABLE fans
+ADD COLUMN artist_id INT;
+```
 
 5. Write the SQL to add yourself as a fan of the Black Eyed Peas? ArtistId **169**
 
+```sql
+INSERT INTO fans (name, artist_id)
+VALUES ("Jallen", 169);
+```
 6. How would you update your name in the fans table to be your new name?
+
+```sql
+UPDATE fans
+SET name = "J-Raffe"
+WHERE name = "Jallen";
+```
 
 7. Write the SQL to return fans that are not fans of the black eyed peas.
 
