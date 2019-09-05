@@ -2,54 +2,54 @@
 
 ## SWBATs
 
-*  [ ] Explain persistence and the need for using SQL
-*  [ ] Define SQL
-*  [ ] Explain the difference between SQLite3 and SQL
-*  [ ] Explore provided data through SQLite Browser
-*  [ ] Define CRUD
-*  [ ] Perform CRUD actions on a single table
+*  [x] Explain persistence and the need for using SQL
+*  [x] Define SQL
+*  [x] Explain the difference between SQLite3 and SQL
+*  [x] Explore provided data through SQLite Browser
+*  [x] Define CRUD
+*  [x] Perform CRUD actions on a single table
 *  [ ] Perform CRUD actions across related tables
 
 ## What can I do with data?
 
 
-CRUD
+#### CRUD
 
-- Create
+__Create__
 - store
 
 
-- Read
+__Read__
 - look it up
 - compare it - differences in values, length of something
 - analyze - average, statistics, count, logistic regression
 
 
-- Update
+__Update__
 - update - change name, address - alter attributes of some data
 
-- Destroy
+__Destroy__
 - delete - get rid of it
 
 - CRUD applications
 
-Instagram
+#### Instagram
 
-Create
+_Create_
 - make post, story, uploading a photo
 - make a comment
 
-Read
+_Read_
 - scrollin' through your feedz
 
-Updating
+_Updating_
 - edit the comment, changing your username, avatar
 
-Destroy
+_Destroy_
 - deleting a post
 - deleting your account
 
-Database
+#### Database
 - a place for storage
 - a big server
 - informatio on a computer
