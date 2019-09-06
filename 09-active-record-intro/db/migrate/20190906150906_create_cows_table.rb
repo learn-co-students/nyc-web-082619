@@ -3,7 +3,6 @@ class CreateCowsTable < ActiveRecord::Migration[5.2]
     create_table :cows do |table|
       table.string :name
       table.string :breed
-      table.alien_id :integer # foreign key
       table.timestamps
     end
   end
