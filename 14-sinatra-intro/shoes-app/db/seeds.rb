@@ -1,0 +1,6 @@
+User.create!(name: "Alex",age: 21,budget_in_usd: 75, shoe_size:8,city:"new york")
+User.create!(name: "Jallen",age: 26,budget_in_usd: 125, shoe_size:15,city:"kansas city")
+User.create!(name:"Tanya",age:32,budget_in_usd:500, shoe_size:8.5,city:"west new york")
+User.create!(name: "Wilf",age: 23,budget_in_usd: 20, shoe_size: 9,city:"london")
+User.create!(name:"Neeraj",age:28,budget_in_usd:501, shoe_size:10.5,city:"philadelphia")
+User.create!(name: "Tashawn",age:29,budget_in_usd:15, shoe_size:9.5,city:"los angeles")
