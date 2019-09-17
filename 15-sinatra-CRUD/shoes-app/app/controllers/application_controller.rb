@@ -12,13 +12,9 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/pongo" do
+    "Be Cool."
     erb :pongo
   end
 
-  # Index Action
-  get "/users" do  
-    @users = User.all
-    erb :index
-  end
 
 end

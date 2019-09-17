@@ -1,0 +1,10 @@
+<h1>All Users</h1>
+
+<ul>
+
+<% @users.each do |user|%>
+<a href="/users/<%=user.id%>"><li><%=user.name%></li></a>
+<%end%>
+</ul>
+
+<button><a href="/users/new">Create User</a>  </button>

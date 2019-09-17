@@ -1,0 +1,13 @@
+User Edit
+
+<form action="/users/<%=@user.id%>" method="POST">
+    <input type="hidden" name="_method" value="PATCH"/>
+  <input type="text" name="user[name]" value=<%=@user.name%>>
+  <input type="number" name="user[shoe_size]" value=<%=@user.shoe_size%>>
+  <input type="number" name="user[age]" value=<%=@user.age%>>
+  <input type="number" name="user[budget_in_usd]" value=<%=@user.budget_in_usd%>>
+  <input type="text" name="user[city]" value=<%=@user.city%>>
+  <input type="submit" >
+ 
+</form> 
+
