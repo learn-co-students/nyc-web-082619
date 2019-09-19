@@ -1,0 +1,30 @@
+<h1>Musicians#new</h1>
+<p>Find me in app/views/musicians/new.html.erb</p>
+
+
+
+Form Tag:
+<%=form_tag "/musicians" do %>
+<%=label_tag :name%>
+<%=text_field_tag :"musician[name]"%>
+<%=label_tag :age%>
+<%=number_field_tag :"musician[age]"%>
+<%=label_tag :label%>
+<%=text_field_tag :"musician[label]"%>
+<%=submit_tag :submit%>
+<%end%>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+Form For:
+<%=form_for @musician do |f| %>
+<%=f.label :name%>
+<%= f.text_field :name%>
+<%= f.number_field :age%>
+<%= f.text_field :label%>
+<%= f.submit :submit%>
+<%end%>
