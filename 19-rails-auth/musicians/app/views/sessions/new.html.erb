@@ -1,0 +1,10 @@
+<%if flash[:message]%>
+<h1><%=flash[:message]%></h1>
+<%end%>
+
+
+<%=form_tag "/login" do%>
+<%=text_field_tag :username%>
+<%=password_field_tag :password%>
+<%=submit_tag "log in"%>
+<%end%>

@@ -1,0 +1,46 @@
+<h1>Musicians#new</h1>
+<p>Find me in app/views/musicians/new.html.erb</p>
+
+<!-- <form action="/musicians" method="POST">
+    <input type="text" name="musician[name]" />
+    <input type="submit" value="submit" />
+</form> -->
+
+
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+Form Tag:
+<%=form_tag "/musicians" do %>
+<%=label_tag :name%>
+<%=text_field_tag :"musician[name]"%>
+<%=label_tag :age%>
+<%=number_field_tag :"musician[age]"%>
+<%=label_tag :label%>
+<%=text_field_tag :"musician[label]"%>
+<%=submit_tag :submit%>
+<%end%>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<%if flash[:message]%>
+<h3><%=flash[:message]%></h3>
+<%end%>
+
+Form For:
+<%=form_for @m do |f| %>
+<%=f.label :name%>
+<%= f.text_field :name%>
+<%= f.number_field :age%>
+<%= f.text_field :label%>
+<%= f.submit :submit%>
+<%end%>

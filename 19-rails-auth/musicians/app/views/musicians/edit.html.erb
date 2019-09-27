@@ -1,0 +1,11 @@
+<h1>Musicians#edit</h1>
+<p>Find me in app/views/musicians/edit.html.erb</p>
+
+
+<%=form_for @m do |f| %>
+<%=f.label :name%>
+<%= f.text_field :name%>
+<%= f.number_field :age%>
+<%= f.text_field :label%>
+<%= f.submit :submit%>
+<%end%>
