@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      // render takes 2 arguments
+      // 1. HTMLish stuff (what we want on the page)
+      // 2. Where we want to put it
+
+      // function renderCard(headerText, tagline){
+      //   return <div className="card">
+      //     <h1>{headerText}</h1>
+      //     <h3>{tagline}</h3>
+      //   </div>
+      // }
+
+      // ReactDOM.render(
+      //   <div>
+      //     {renderCard("Hello!", "Welcome to React")}
+      //     {renderCard("Wowzers...", "Goodbye moonman")}
+      //   </div>
+      //   , 
+      //   document.getElementById('root')
+      // )
+
+      function Card(props){
+        console.log(props)
+
+        const style = {color: props.color}
+
+        return <div className="card" style={style}>
+          <h1>{props.headerText} {props.excited ? "!!!!" : "...."}</h1>
+          <h3>{props.tagline}</h3>
+        </div>
+      }
+
+      ReactDOM.render(
+        <div className="container" id="tortilla">
+          <Card headerText="Hello" tagline="Welcome to React" color="purple"excited={true}/>
+          <Card headerText="Wowzers" tagline="Goodbye moonman" color="blue"excited={false}/>
+          <Card headerText="Wowzers" tagline="Goodbye moonman" color="green"excited={true}/>
+        </div>
+        , 
+        document.getElementById('root')
+      )
+
+    </script>
+  </body>
+</html>
