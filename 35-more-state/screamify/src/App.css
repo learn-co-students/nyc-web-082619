@@ -1,0 +1,31 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+.scream-list {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 3vw;
+}
+
+.tile {
+  display: flex;
+  border-top: solid rgba(243,168,60, 0.75) 1px;
+  justify-content: space-around;
+  background-color: black;
+  font-weight: bold;
+}
+
+.header {
+  border-top: none;
+  color: rgba(255,255,255,0.5);
+  font-weight: normal;
+}
+
+.tile > * {
+  width: 100%;
+}
+
