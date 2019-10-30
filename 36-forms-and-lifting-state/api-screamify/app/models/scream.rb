@@ -1,0 +1,2 @@
+class Scream < ApplicationRecord
+end
