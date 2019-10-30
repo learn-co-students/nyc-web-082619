@@ -2,12 +2,12 @@ State, Events, and Conditional Rendering
 ==============
 
 ## SWBATs
-- [ ] Add event handlers to elements in React
-- [ ] Explain why we have Synthetic Events
-- [ ] Instantiate `state` inside and outside of the `constructor`
-- [ ] Create event handler callbacks that manipulate `state`
-- [ ] Trigger rerenders by calling `setState`
-- [ ] Manipulate the DOM by changing values in `state` instead of using vanilla JS
+- [x] Add event handlers to elements in React
+- [x] Explain why we have Synthetic Events
+- [x] Instantiate `state` inside and outside of the `constructor`
+- [x] Create event handler callbacks that manipulate `state`
+- [x] Trigger rerenders by calling `setState`
+- [x] Manipulate the DOM by changing values in `state` instead of using vanilla JS
 - [ ] Correctly choose when to use `props` vs `state`, and explain why one would use one or the other
 
 ## Lecture Notes
