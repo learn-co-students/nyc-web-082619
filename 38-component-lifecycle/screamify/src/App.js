@@ -11,7 +11,8 @@ class App extends Component {
     screams: [],
     term: "",
     displayedTitle: "",
-    displayedScreamer: ""
+    displayedScreamer: "",
+    loading: true
   }
 
   applyFilter = (filterTerm) => {
@@ -55,6 +56,15 @@ class App extends Component {
     })
   }
 
+  componentDidMount(){
+    this.fetchScreams()
+  }
+
+
+  shouldComponentUpdate(nextProps, nextState){
+    return false
+  }
+
   fetchScreams = () => {
     fetch("http://localhost:3001/screams")
     .then(res => res.json())
@@ -67,36 +77,47 @@ class App extends Component {
 
       // triggers a rerender
       this.setState({
-        screams: data
+        screams: data,
+        loading: false
       })
     })
   }
 
+  renderBody = () => {
+    if (this.state.loading){
+      return <div class="wrap">
+            <div class="loading">
+              <div class="bounceball"></div>
+              <div class="text">NOW LOADING</div>
+            </div>
+          </div>
+    } else {
+      return <div className="center-container">
+            <div className="top-panel">
+              <h1>Screams</h1>
+              <SearchForm applyFilter={this.applyFilter} term={this.state.term}/>
+            </div>
+            <div className="scream-list">
+              <div className="tile header">
+                <p>Title</p>
+                <p>Screamer</p>
+                <p>Duration</p>
+              </div>
+              {this.renderTiles()}
+            </div>
+            <NowPlaying 
+              displayedTitle={this.state.displayedTitle} 
+              displayedScreamer={this.state.displayedScreamer} 
+            />
+          </div>
+    }
+  }
+
   render(){
     // console.log("RENDERING", this.state.screams)
-
     return (
       <div className="app">
-        <button onClick={this.fetchScreams}>Get all screams</button>
-        <div className="center-container">
-          <div className="top-panel">
-            <h1>Screams</h1>
-            <SearchForm applyFilter={this.applyFilter} term={this.state.term}/>
-          </div>
-          <div className="scream-list">
-            <div className="tile header">
-              <p>Title</p>
-              <p>Screamer</p>
-              <p>Duration</p>
-            </div>
-            {this.renderTiles()}
-          </div>
-          <NowPlaying 
-            displayedTitle={this.state.displayedTitle} 
-            displayedScreamer={this.state.displayedScreamer} 
-          />
-        </div>
-        
+        {this.renderBody()}
       </div>
     );
   }
