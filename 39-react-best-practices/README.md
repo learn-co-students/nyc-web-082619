@@ -26,7 +26,7 @@ React Best Practices
   - [x] Spread (w/ prepend and append)
   - [x] constructor vs. ES7 instance variables
   - [x] map (as a way to update objects in an array of objects)
-  - [ ] { [variable]: "as_key" }
+  - [x] { [variable]: "as_key" }
 
 ## Resources
 
