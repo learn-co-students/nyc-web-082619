@@ -10,37 +10,39 @@ class TestForm extends React.Component {
   }
 
   handleChange = (event) => {
+    console.log("in change target", event.target)
+    console.log("in change target name", event.target.value)
     this.setState({
       [event.target.name]: event.target.value
     })
-  }  
+  }
 
-  render(){
+  render() {
     console.log(this.state)
     return (
       <form className="scream-search">
-        <input 
-          type="text" 
+        <input
+          type="text"
           value={this.state.name}
           name="name"
           placeholder="Name..."
-          onChange={this.handleChange}/>
-        <input 
-          type="text" 
+          onChange={this.handleChange} />
+        <input
+          type="text"
           value={this.state.age}
           name="age"
           placeholder="Age..."
-          onChange={this.handleChange}/>
-        <input 
-          type="text" 
+          onChange={this.handleChange} />
+        <input
+          type="text"
           value={this.state.address}
           name="address"
           placeholder="Address..."
-          onChange={this.handleChange}/>
+          onChange={this.handleChange} />
       </form>
     )
   }
-  
+
 }
 
 
