@@ -1,0 +1,30 @@
+.main-container {
+  display: flex;
+  height: 100vh;
+}
+
+.main-container > * {
+  height: 100%;
+  padding: 10px;
+}
+
+.channel-container {
+  width: 25vw;
+}
+
+.chat-container {
+  width: 65vw;
+}
+
+.message-form {
+  width: 100%;
+}
+
+.message-form > .input {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.message-form > input {
+  display: none;
+}

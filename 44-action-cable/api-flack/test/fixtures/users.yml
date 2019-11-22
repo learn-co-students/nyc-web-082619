@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  username: MyString
+  dark_mode: MyString
+  : false
+  notifications: false
+
+two:
+  username: MyString
+  dark_mode: MyString
+  : false
+  notifications: false
